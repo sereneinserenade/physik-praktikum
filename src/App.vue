@@ -1,56 +1,228 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+    <v-app-bar app color="green" dark>
+      <v-btn href="/" target="_blank" text>
+        <span class="mr-2">Mechanik Praktikum</span>
+      </v-btn>
+      <div></div>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/sereneinserenade/physik-praktikum"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Zum Quellcode</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <v-container>
+        <!-- Dialog Box-->
+        <div class="text-center">
+          <v-dialog v-model="dialog" width="500">
+            <v-card>
+              <v-card-title class="headline red lighten-1 " primary-title>
+                Wir bedanken uns bei Ihnen.
+              </v-card-title>
+
+              <v-card-text class="mt-3">
+                Lieber Herr Hornauer, <br />
+                <br />
+                wir bedanken und bei Ihnen für so ein unfassbar tolles
+                Praktikum. Wir haben die tollste Zeit gehabt, indem wir einfach
+                versuchten, die Aufgaben gemeinsam zu lösen und zu verstehen,
+                wie die Physik in der Welt eine größe Rolle spielt. Durch die
+                Experimenten wurden uns klar, dass das Durchführen von
+                Experimenten gar nicht leicht ist, aber mit Engagement kann man
+                alles schaffen . Ich und mein Team wären immer dafür dankbar.
+
+                <div class="mt-3">
+                  Mit ausgezeichneter Hochachtung, <br />
+                  Jeet Mandaliya <br />
+                  Nikhil Pingle <br />
+                  Dmytro Shchurovskyi <br />
+                  Grigori Nekhin
+                </div>
+              </v-card-text>
+
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" text @click="dialogClose">
+                  Zum Protokoll
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </div>
+      </v-container>
+
+      <v-container>
+        <main class="mainCss" v-if="showMain">
+          <v-expansion-panels class="expPanelsClass">
+            <v-expansion-panel class="expPanelClass">
+              <v-expansion-panel-header
+                >Aufgabe 1: Besenstiel</v-expansion-panel-header
+              >
+              <v-expansion-panel-content>
+                <div class="frage">
+                  Frage : Sie bewegen einen Auflagepunkt langsam
+                  („quasistatisch“) und gleichmäßig zum anderen. x(t)=x0-v0·t.
+                  Erläutern Sie warum immer 0&lt;s(t)&lt;x(t) gilt. Berechnen
+                  und messen Sie die Bewegung des Schwerpunktes s(t). Erstellen
+                  sie Diagramme für s(t) und ͘s(t) und versuchen Sie eine
+                  Theorie- kurve grob anzupassen. EXTRA: Wie sieht s(t) ohne
+                  diese quasistatische Näherung – d.h. bei großem v0- aus?
+                </div>
+                <div class="antwort"></div>
+                <div class="extraAns mt-5">
+                  Beim großen V<sub>0</sub> kann zwischen Objekt und
+                  Auflagerpunkt B keine Haftreibung entstehen weil diese Kraft
+                  nur zwischen nicht bewegende Objekte entstehet, deswegen
+                  bleibt Auflager B bewegen bezüglich Objekte, und wenn es durch
+                  schwerpunkt kommt, kippt Das System um
+                </div>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel class="expPanelClass">
+              <v-expansion-panel-header
+                >Aufgabe 2: Getränkedose</v-expansion-panel-header
+              >
+              <v-expansion-panel-content>
+                <div class="frage">
+                  Kaufen Sie ein Dose mit einem Getränk Ihrer Wahl. Bestimmen
+                  Sie den Schwerpunkt der vollen Dose. Kippen Sie die Dose, bis
+                  der momentane Schwerpunkt über dem Auflagepunkt liegt.
+                  Bestimmen sie den Gleichgewichtswinkel Φ0 Leeren Sie die Dose
+                  systematisch und bestimmen Sie den jeweiligen
+                  Gleichgewichtswinkel Φ(h) in Abhängigkeit der Füllhöhe h.
+                  Berechen Sie die Höhe des Schwerpunktes, wenn die Dose
+                  senkrecht steht. Bei welchen Füllhöhen hG steht die Dose
+                  stabil auf dem Rand? Erstellen Sie ein Diagramm für Φ(h) und
+                  zeichnen Sie den Bereich für hG ein.
+                </div>
+                <div class="antwort"></div>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel class="expPanelClass">
+              <v-expansion-panel-header
+                >Aufgabe 3: Bücherstapel</v-expansion-panel-header
+              >
+              <v-expansion-panel-content>
+                <div class="frage">
+                  Stapeln Sie Dinge lose übereinander, sodass ein möglichst
+                  großer Überstand ΔΣ entsteht. Leiten Sie die Beziehung Δn in
+                  der idealen Welt her: <br />
+
+                  1. alle Bücher exakt gleich, 2. beliebig scharfe Kanten 3.
+                  beliebig viele Bücher vorhanden, 4. alles statisch. 5. Bücher
+                  und Tisch beliebig stabil <br />
+
+                  Und in der fast idealen Welt: <br />
+                  6. Zur Sicherheit wird jedes Buch um einen konstanten
+                  Bruchteil ε=2% der Länge Li zurückgeschoben. <br />
+
+                  Wie groß kann ΔΣ in beiden Welten maximal werden?
+                </div>
+                <div class="antwort"></div>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </main>
+      </v-container>
+
+      <!-- for the confettis -->
+      <div class="myBtn">
+        <v-btn v-if="notConf" @click="start">
+          <span class="mr-2">Confetti Wieder Starten</span>
+          <v-icon>mdi-play</v-icon>
+        </v-btn>
+        <v-btn v-else @click="stop">
+          <span class="mr-2">Confetti Beenden</span>
+          <v-icon class="rotated">mdi-plus</v-icon>
+        </v-btn>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
-  components: {
-    HelloWorld
-  },
+  components: {},
 
   data: () => ({
-    //
-  })
+    showMain: false,
+    dialog: true,
+    showConfetti: false,
+    notConf: false
+  }),
+
+  created() {
+    this.$vuetify.theme.dark = true;
+  },
+
+  methods: {
+    dialogClose() {
+      this.dialog = false;
+      this.showConfetti = true;
+      this.start();
+      this.showMain = !this.showMain;
+    },
+    start() {
+      this.$confetti.start({
+        particlesPerFrame: 0.5
+      });
+      this.notConf = !this.notConf;
+    },
+
+    stop() {
+      this.$confetti.stop();
+      this.notConf = !this.notConf;
+    },
+
+    love() {
+      this.$confetti.update({
+        particles: [
+          {
+            type: "heart"
+          },
+          {
+            type: "circle"
+          }
+        ],
+        defaultColors: ["red", "pink", "#ba0000"]
+      });
+    }
+  }
 };
 </script>
+<style>
+.rotated {
+  transform: rotate(45deg);
+}
+.myBtn {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+.mainCss {
+  background: rgba(256, 256, 256, 0.1);
+}
+.frage {
+  color: darkorange;
+}
+.frage::first-letter {
+  font-size: 1.5em;
+}
+.extraAns {
+  color: aquamarine;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+</style>

@@ -71,14 +71,33 @@
               <v-expansion-panel-content>
                 <div class="frage">
                   Frage : Sie bewegen einen Auflagepunkt langsam
-                  („quasistatisch“) und gleichmäßig zum anderen. x(t)=x0-v0·t.
-                  Erläutern Sie warum immer 0&lt;s(t)&lt;x(t) gilt. Berechnen
-                  und messen Sie die Bewegung des Schwerpunktes s(t). Erstellen
-                  sie Diagramme für s(t) und ͘s(t) und versuchen Sie eine
-                  Theorie- kurve grob anzupassen. EXTRA: Wie sieht s(t) ohne
-                  diese quasistatische Näherung – d.h. bei großem v0- aus?
+                  („quasistatisch“) und gleichmäßig zum anderen.
+                  X(t)=X<sub>0</sub>-V<sub>0</sub>·t. Erläutern Sie warum immer
+                  0&lt;S(t)&lt;X(t) gilt. Berechnen und messen Sie die Bewegung
+                  des Schwerpunktes S(t). Erstellen sie Diagramme für S(t) und
+                  S(t) und versuchen Sie eine Theorie- kurve grob anzupassen.
+                  EXTRA: Wie sieht S(t) ohne diese quasistatische Näherung –
+                  d.h. bei großem V<sub>0</sub> aus?
                 </div>
-                <div class="antwort"></div>
+                <div
+                  class="display-2 d-flex align-content-center justify-center"
+                >
+                  <div>
+                    Antwort
+                  </div>
+                </div>
+                <div class="antwort mt-5">
+                  <div class="d-flex align-content-space-between">
+                    <div>
+                      <video-player class="videoThing" style="width: 50%;">
+                        <source src="../src/assets/videos/dimaAufEins.mp4" />
+                      </video-player>
+                    </div>
+                    <div class="explain" style="width: 50%">
+                      Die Erklärung findet hier staat.
+                    </div>
+                  </div>
+                </div>
                 <div class="extraAns mt-5">
                   Beim großen V<sub>0</sub> kann zwischen Objekt und
                   Auflagerpunkt B keine Haftreibung entstehen weil diese Kraft
@@ -97,8 +116,8 @@
                   Kaufen Sie ein Dose mit einem Getränk Ihrer Wahl. Bestimmen
                   Sie den Schwerpunkt der vollen Dose. Kippen Sie die Dose, bis
                   der momentane Schwerpunkt über dem Auflagepunkt liegt.
-                  Bestimmen sie den Gleichgewichtswinkel Φ0 Leeren Sie die Dose
-                  systematisch und bestimmen Sie den jeweiligen
+                  Bestimmen sie den Gleichgewichtswinkel Φ<sub>0</sub> Leeren
+                  Sie die Dose systematisch und bestimmen Sie den jeweiligen
                   Gleichgewichtswinkel Φ(h) in Abhängigkeit der Füllhöhe h.
                   Berechen Sie die Höhe des Schwerpunktes, wenn die Dose
                   senkrecht steht. Bei welchen Füllhöhen hG steht die Dose
@@ -117,14 +136,17 @@
                   Stapeln Sie Dinge lose übereinander, sodass ein möglichst
                   großer Überstand ΔΣ entsteht. Leiten Sie die Beziehung Δn in
                   der idealen Welt her: <br />
+                  <br />
 
                   1. alle Bücher exakt gleich, 2. beliebig scharfe Kanten 3.
                   beliebig viele Bücher vorhanden, 4. alles statisch. 5. Bücher
                   und Tisch beliebig stabil <br />
+                  <br />
 
                   Und in der fast idealen Welt: <br />
                   6. Zur Sicherheit wird jedes Buch um einen konstanten
                   Bruchteil ε=2% der Länge Li zurückgeschoben. <br />
+                  <br />
 
                   Wie groß kann ΔΣ in beiden Welten maximal werden?
                 </div>
@@ -137,7 +159,7 @@
 
       <!-- for the confettis -->
       <div class="myBtn">
-        <v-btn v-if="notConf" @click="start">
+        <v-btn v-if="!notConf" @click="start">
           <span class="mr-2">Confetti Wieder Starten</span>
           <v-icon>mdi-play</v-icon>
         </v-btn>
@@ -151,10 +173,15 @@
 </template>
 
 <script>
+import { videoPlayer } from "vue-md-player";
+import "vue-md-player/dist/vue-md-player.css";
+
 export default {
   name: "App",
 
-  components: {},
+  components: {
+    videoPlayer
+  },
 
   data: () => ({
     showMain: false,
@@ -224,5 +251,8 @@ export default {
   color: aquamarine;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.videoThing {
+  height: 70vh;
 }
 </style>

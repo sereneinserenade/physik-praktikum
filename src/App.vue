@@ -302,8 +302,8 @@
                   <v-row class="answerRow">
                     <v-col lg="2"> Grigori Nekhin </v-col>
                     <v-col lg="2"> 347 </v-col>
-                    <v-col lg="2"> 14 cm </v-col>
-                    <v-col lg="2"> 17 (cm) </v-col>
+                    <v-col lg="2"> 21,5 cm </v-col>
+                    <v-col lg="2"> 19 cm </v-col>
                     <v-col lg="4">
                       <v-img
                         src="../src/assets/GrishVier.png"

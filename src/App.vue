@@ -218,6 +218,24 @@
                 </div>
               </v-expansion-panel-content>
             </v-expansion-panel>
+
+            <!--            aufgabe 4 -->
+            <v-expansion-panel class="expPanelClass">
+              <v-expansion-panel-header
+                >Aufgabe 4: Einzelaufgabe</v-expansion-panel-header
+              >
+              <v-expansion-panel-content>
+                <div class="frage"></div>
+                <div
+                  class="headline d-flex align-content-center justify-center mt-5"
+                >
+                  <div>
+                    Antwort
+                  </div>
+                </div>
+                <div class="antwort"></div>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
           </v-expansion-panels>
         </main>
       </v-container>

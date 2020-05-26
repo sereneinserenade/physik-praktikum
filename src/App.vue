@@ -316,6 +316,15 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </main>
+        <div
+          v-if="showMain"
+          class="headline d-flex justify-center align-content-center feedBackText"
+        >
+          <div>
+            Bitte geben Sie das Feedback in der Form unten. ( Scrollen Sie bis
+            unten)
+          </div>
+        </div>
       </v-container>
     </v-content>
 
@@ -420,5 +429,8 @@ export default {
   -webkit-box-shadow: 0px 0px 145px -6px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 145px -6px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 40px -6px rgba(255, 255, 255, 1);
+}
+.feedBackText {
+  position: relative;
 }
 </style>

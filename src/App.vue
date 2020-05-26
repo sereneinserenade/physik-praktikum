@@ -31,13 +31,13 @@
               <v-card-text class="mt-3">
                 Lieber Herr Hornauer, <br />
                 <br />
-                wir bedanken und bei Ihnen für so ein unfassbar tolles
+                wir bedanken uns bei Ihnen für so ein unfassbar tolles
                 Praktikum. Wir haben die tollste Zeit gehabt, indem wir einfach
-                versuchten, die Aufgaben gemeinsam zu lösen und zu verstehen,
+                versuchten, die Aufgaben gemeinsam zu lösen und zu verstehen und
                 wie die Physik in der Welt eine größe Rolle spielt. Durch die
                 Experimenten wurden uns klar, dass das Durchführen von
                 Experimenten gar nicht leicht ist, aber mit Engagement kann man
-                alles schaffen . Ich und mein Team wären immer dafür dankbar.
+                alles schaffen. Ich und mein Team wäre immer dafür dankbar.
 
                 <div class="mt-3">
                   Mit ausgezeichneter Hochachtung, <br />
@@ -64,6 +64,7 @@
       <v-container>
         <main class="mainCss" v-if="showMain">
           <v-expansion-panels class="expPanelsClass">
+            <!--            aufgabe 1-->
             <v-expansion-panel class="expPanelClass">
               <v-expansion-panel-header
                 >Aufgabe 1: Besenstiel</v-expansion-panel-header
@@ -80,7 +81,7 @@
                   d.h. bei großem V<sub>0</sub> aus?
                 </div>
                 <div
-                  class="display-2 d-flex align-content-center justify-center"
+                  class="headline d-flex align-content-center justify-center mt-5"
                 >
                   <div>
                     Antwort
@@ -92,6 +93,7 @@
                       <video-player class="videoThing" style="width: 50%;">
                         <source src="../src/assets/videos/dimaAufEins.mp4" />
                       </video-player>
+                      Video von Dmytro Shchurovskyi
                     </div>
                     <div class="explain" style="width: 50%">
                       Die Erklärung findet hier staat.
@@ -107,6 +109,8 @@
                 </div>
               </v-expansion-panel-content>
             </v-expansion-panel>
+
+            <!--            aufgabe 2-->
             <v-expansion-panel class="expPanelClass">
               <v-expansion-panel-header
                 >Aufgabe 2: Getränkedose</v-expansion-panel-header
@@ -124,9 +128,18 @@
                   stabil auf dem Rand? Erstellen Sie ein Diagramm für Φ(h) und
                   zeichnen Sie den Bereich für hG ein.
                 </div>
+                <div
+                  class="headline d-flex align-content-center justify-center mt-5"
+                >
+                  <div>
+                    Antwort
+                  </div>
+                </div>
                 <div class="antwort"></div>
               </v-expansion-panel-content>
             </v-expansion-panel>
+
+            <!--            aufgabe 3 -->
             <v-expansion-panel class="expPanelClass">
               <v-expansion-panel-header
                 >Aufgabe 3: Bücherstapel</v-expansion-panel-header
@@ -150,25 +163,77 @@
 
                   Wie groß kann ΔΣ in beiden Welten maximal werden?
                 </div>
-                <div class="antwort"></div>
+                <div
+                  class="headline d-flex align-content-center justify-center mt-5"
+                >
+                  <div>
+                    Antwort
+                  </div>
+                </div>
+                <div class="antwort">
+                  Δ<sub>Σ</sub> = möglicht großer Überstand, M = Masse eines
+                  Buches <br />
+                  <br />
+
+                  Der Hitergrundgedanke : Der schwerpunkt von n Büchern soll
+                  genau am Ende des Tisches liegen. Dabei soll man aber auch
+                  darüber nachdenken, daß der Schwerpunkt von n - 1 Bücher
+                  direkt über der Vorderkante des unteren Buches liegt. <br />
+                  <br />
+
+                  Die Rechnung is bezüglich der Länge des Buches. <br />
+                  <br />
+
+                  <p>
+                    Vergleichen der Momente der Bücher
+                    <img
+                      src="../src/assets/Bildschirmfoto 2020-05-26 um 03.14.02.png"
+                      style="width: 100%;"
+                    />
+                    Daraus folgt
+                    <img
+                      src="../src/assets/Bildschirmfoto 2020-05-26 um 03.14.31.png"
+                      style="width: 100%;"
+                    />
+                    Mit weiterer Rechnung
+                    <img
+                      src="../src/assets/Bildschirmfoto 2020-05-26 um 03.14.37.png"
+                      style="width: 100%;"
+                    />
+                    <img
+                      src="../src/assets/Bildschirmfoto 2020-05-26 um 03.14.41.png"
+                      style="width: 100%;"
+                    />
+                    <img
+                      src="../src/assets/Bildschirmfoto 2020-05-26 um 03.14.44.png"
+                      style="width: 100%;"
+                    />
+                  </p>
+
+                  <p>
+                    Bei der Prüfung dieser Formel kommt mit n=1 d<sub>n</sub> =
+                    0.5 raus. Das heißt, daß ein halbes Buch soll auf dem Tisch
+                    bleiben.
+                  </p>
+                </div>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
         </main>
       </v-container>
-
-      <!-- for the confettis -->
-      <div class="myBtn">
-        <v-btn v-if="!notConf" @click="start">
-          <span class="mr-2">Confetti Wieder Starten</span>
-          <v-icon>mdi-play</v-icon>
-        </v-btn>
-        <v-btn v-else @click="stop">
-          <span class="mr-2">Confetti Beenden</span>
-          <v-icon class="rotated">mdi-plus</v-icon>
-        </v-btn>
-      </div>
     </v-content>
+
+    <!-- for the confettis -->
+    <div class="myBtn">
+      <v-btn v-if="!notConf" @click="start">
+        <span class="mr-2">Confetti Wieder Starten</span>
+        <v-icon>mdi-play</v-icon>
+      </v-btn>
+      <v-btn v-else @click="stop">
+        <span class="mr-2">Confetti Beenden</span>
+        <v-icon class="rotated">mdi-plus</v-icon>
+      </v-btn>
+    </div>
   </v-app>
 </template>
 
@@ -234,7 +299,7 @@ export default {
   transform: rotate(45deg);
 }
 .myBtn {
-  position: absolute;
+  position: fixed;
   bottom: 2em;
   right: 2em;
 }

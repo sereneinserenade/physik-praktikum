@@ -32,9 +32,9 @@
                 Lieber Herr Hornauer, <br />
                 <br />
                 wir bedanken uns bei Ihnen für so ein unfassbar tolles
-                Praktikum. Wir haben die tollste Zeit gehabt, indem wir einfach
-                versuchten, die Aufgaben gemeinsam zu lösen und zu verstehen und
-                wie die Physik in der Welt eine größe Rolle spielt. Durch die
+                Praktikum. Wir haben die geilste Zeit gehabt, indem wir einfach
+                versuchten, die Aufgaben gemeinsam zu lösen und zu verstehen wie
+                die Physik in der Welt eine größe Rolle spielt. Durch die
                 Experimenten wurden uns klar, dass das Durchführen von
                 Experimenten gar nicht leicht ist, aber mit Engagement kann man
                 alles schaffen. Ich und mein Team wäre immer dafür dankbar.
@@ -87,20 +87,27 @@
                     Antwort
                   </div>
                 </div>
-                <div class="antwort mt-5">
-                  <div class="d-flex align-content-space-between">
-                    <div>
-                      <video-player class="videoThing" style="width: 50%;">
+                <v-container>
+                  <v-col>
+                    <v-row>
+                      <video-player class="videoThing">
                         <source src="../src/assets/videos/dimaAufEins.mp4" />
                       </video-player>
-                      Video von Dmytro Shchurovskyi
-                    </div>
-                    <div class="explain" style="width: 50%">
-                      Die Erklärung findet hier staat.
-                    </div>
-                  </div>
-                </div>
+                    </v-row>
+                    <v-row class="d-flex justify-center align-content-center">
+                      <div style="text-align: center;">
+                        Video von Dmytro Shchurovskyi
+                      </div>
+                    </v-row>
+                  </v-col>
+                  <v-img src="../src/assets/auf1img1.jpg"></v-img>
+                  <v-img src="../src/assets/auf1img2.png"></v-img>
+                  <v-img src="../src/assets/auf1img3.png"></v-img>
+                </v-container>
                 <div class="extraAns mt-5">
+                  <h2>Extraaufgabe :</h2>
+                  <br />
+
                   Beim großen V<sub>0</sub> kann zwischen Objekt und
                   Auflagerpunkt B keine Haftreibung entstehen weil diese Kraft
                   nur zwischen nicht bewegende Objekte entstehet, deswegen
@@ -135,6 +142,15 @@
                     Antwort
                   </div>
                 </div>
+                <v-img
+                  src="../src/assets/pdfs/Bildschirmfoto 2020-05-26 um 18.53.21.png"
+                >
+                </v-img>
+
+                <v-img
+                  src="../src/assets/pdfs/Bildschirmfoto 2020-05-26 um 18.53.48.png"
+                >
+                </v-img>
                 <div class="antwort"></div>
               </v-expansion-panel-content>
             </v-expansion-panel>
@@ -213,7 +229,10 @@
                   <p>
                     Bei der Prüfung dieser Formel kommt mit n=1 d<sub>n</sub> =
                     0.5 raus. Das heißt, daß ein halbes Buch soll auf dem Tisch
-                    bleiben.
+                    bleiben. <br />
+                    <br />
+                    Und so lässt es sich zeigen, dass es eine harmonische folge
+                    ist.
                   </p>
                 </div>
               </v-expansion-panel-content>
@@ -225,15 +244,74 @@
                 >Aufgabe 4: Einzelaufgabe</v-expansion-panel-header
               >
               <v-expansion-panel-content>
-                <div class="frage"></div>
-                <div
-                  class="headline d-flex align-content-center justify-center mt-5"
-                >
-                  <div>
-                    Antwort
-                  </div>
+                <div class="frage">
+                  Stapeln Sie nun echte Dinge systematisch übereinander. Diese
+                  können auch verschieden in Länge L<sub>i</sub> (längstes Buch
+                  Lmax) und Masse mi sein. Dokumentieren Sie den Überstand
+                  ΔΣ<sup>0</sup>
+                  des obersten Buches durch ein Handyfoto mit aussagekräftigem
+                  Maßstab. Legen Sie nun ein 1€ Stück auf den äußersten Rand des
+                  obersten Buchs. Falls der Buchstapel noch stabil ist,
+                  dokumentieren Sie und bestimmen Sie ΔΣ des 1€ Stück (äußerster
+                  Rand der Münze zur Tischkante).
                 </div>
-                <div class="antwort"></div>
+                <div class="antwort">
+                  <v-row>
+                    <v-col lg="2"> Name </v-col>
+                    <v-col lg="2"> Kurs </v-col>
+                    <v-col lg="2"> Δ<sub>Σ</sub> (cm) </v-col>
+                    <v-col lg="2"> L<sub>max.</sub> (cm) </v-col>
+                    <v-col lg="4"> Zielfoto </v-col>
+                  </v-row>
+                  <v-row class="answerRow">
+                    <v-col lg="2"> Jeet Mandaliya </v-col>
+                    <v-col lg="2"> 347 </v-col>
+                    <v-col lg="2"> 14 cm </v-col>
+                    <v-col lg="2"> 17 cm </v-col>
+                    <v-col lg="4">
+                      <v-img
+                        src="../src/assets/JeetVier.png"
+                        class="grey darken-4"
+                      ></v-img>
+                    </v-col>
+                  </v-row>
+                  <v-row class="answerRow">
+                    <v-col lg="2"> Nikhil Pingle </v-col>
+                    <v-col lg="2"> 347 </v-col>
+                    <v-col lg="2"> 37,8 cm </v-col>
+                    <v-col lg="2"> 24,9 cm </v-col>
+                    <v-col lg="4">
+                      <v-img
+                        src="../src/assets/NikhilVier.png"
+                        class="grey darken-4"
+                      ></v-img>
+                    </v-col>
+                  </v-row>
+                  <v-row class="answerRow">
+                    <v-col lg="2"> Dmytro Shchurovskyi </v-col>
+                    <v-col lg="2"> 347 </v-col>
+                    <v-col lg="2"> 27 cm </v-col>
+                    <v-col lg="2"> 12,5 cm </v-col>
+                    <v-col lg="4">
+                      <v-img
+                        src="../src/assets/DimVier.png"
+                        class="grey darken-4"
+                      ></v-img>
+                    </v-col>
+                  </v-row>
+                  <v-row class="answerRow">
+                    <v-col lg="2"> Grigori Nekhin </v-col>
+                    <v-col lg="2"> 347 </v-col>
+                    <v-col lg="2"> 14 cm </v-col>
+                    <v-col lg="2"> 17 (cm) </v-col>
+                    <v-col lg="4">
+                      <v-img
+                        src="../src/assets/GrishVier.png"
+                        class="grey darken-4"
+                      ></v-img>
+                    </v-col>
+                  </v-row>
+                </div>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -336,6 +414,11 @@ export default {
     "Lucida Sans", Arial, sans-serif;
 }
 .videoThing {
-  height: 70vh;
+  height: 80vh;
+}
+.answerRow {
+  -webkit-box-shadow: 0px 0px 145px -6px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 145px -6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 40px -6px rgba(255, 255, 255, 1);
 }
 </style>
